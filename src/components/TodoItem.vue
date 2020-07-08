@@ -6,7 +6,6 @@
         <input v-else class="todo-item-edit" type="text" v-model="title" @blur="doneEdit" @keyup.enter="doneEdit" @keyup.esc="cancelEdit" v-focus>
     </div> <!-- end todo-item-left -->
     <div>
-      <button @click="pluralize">Plural</button>
       <span class="remove-item" @click="removeTodo(todo.id)">
         &times;
       </span>
