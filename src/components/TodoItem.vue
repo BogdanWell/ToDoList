@@ -35,12 +35,6 @@ export default {
       'beforeEditCache': '',
     }
   },
-  //created() {
-  //  eventBus.$on('pluralize', this.handlePluralize)
-  //},
-  //beforeDestroy() {
-  //  eventBus.$off('pluralize', this.handlePluralize)
-  //},
   watch: {
     checkAll() {
       this.completed = this.checkAll ? true : this.todo.completed
@@ -77,18 +71,6 @@ export default {
       this.title = this.beforeEditCache
       this.editing = false
     },
-    //pluralize() {
-    //eventBus.$emit('pluralize')
-    //},
-    handlePluralize() {
-      this.title = this.title + 's'
-      this.$store.dispatch('updateTodo', {
-        'id': this.id,
-        'title': this.title,
-        'completed': this.completed,
-        'editing': this.editing,
-      })
-    }
-  }
+   }
 }
 </script>
